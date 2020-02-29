@@ -1,6 +1,6 @@
 package com.gupao.designpattern.factory.factorymethod;
 
-import net.designpattern.factory.simplefactory.ICourse;
+import com.gupao.designpattern.factory.simplefactory.ICourse;
 
 /**
  * todo 简要信息

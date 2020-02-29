@@ -1,7 +1,7 @@
 package com.gupao.designpattern.factory.factorymethod;
 
-import net.designpattern.factory.simplefactory.ICourse;
-import net.designpattern.factory.simplefactory.PythonCourse;
+import com.gupao.designpattern.factory.simplefactory.ICourse;
+import com.gupao.designpattern.factory.simplefactory.PythonCourse;
 
 /**
  * todo 简要信息
