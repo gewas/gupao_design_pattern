@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 深克隆
+ * 3.原型模式-深克隆（JSON反序列化）
+ * 通过JSON反序列化手段达到真正的克隆。
  *
  * @author gewas
  * @version 1.0
