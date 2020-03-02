@@ -2,21 +2,28 @@ package com.gupao.designpattern.proxy.dynamic.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 /**
  * Jdk动态代理的重要部分，InvocationHandler，负责执行真正的代理逻辑。
  * <p>
- * 此处使用泛型完全没必要
+ * 顺便封装了获取代理类的方法，让客户端调用更简单。
  *
  * @author gewas
  * @version 1.0
  */
-public class JdkProxyInvocationHandler implements InvocationHandler {
+public class LoggerProxy implements InvocationHandler {
 
     private Object target;
 
-    public JdkProxyInvocationHandler(Object target) {
+    private LoggerProxy(Object target) {
         this.target = target;
+    }
+
+    public static Object getProxy(Object target) {
+        LoggerProxy loggerProxy = new LoggerProxy(target);
+        Class<?> clazz = target.getClass();
+        return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), loggerProxy);
     }
 
     /**
@@ -35,10 +42,10 @@ public class JdkProxyInvocationHandler implements InvocationHandler {
     }
 
     private void before() {
-        System.out.println("before doWork()");
+        System.out.println("log before" + System.currentTimeMillis());
     }
 
     private void after() {
-        System.out.println("after doWork()");
+        System.out.println("log after" + System.currentTimeMillis());
     }
 }

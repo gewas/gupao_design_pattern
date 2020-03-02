@@ -7,7 +7,7 @@ package com.gupao.designpattern.proxy.staticproxy;
  * @version 1.0
  * @date 2020/3/1 22:40
  */
-public class Subject implements ISubject {
+public class RealSubject implements ISubject {
     @Override
     public void doWork() {
         System.out.println("do do do");

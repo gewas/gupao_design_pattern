@@ -13,7 +13,7 @@ package com.gupao.designpattern.proxy.staticproxy;
 public class StaticProxyTest {
 
     public static void main(String[] args) {
-        ISubject subject = new SubjectStaticProxy(new Subject());
+        ISubject subject = new Proxy(new RealSubject());
         subject.doWork();
     }
 }
