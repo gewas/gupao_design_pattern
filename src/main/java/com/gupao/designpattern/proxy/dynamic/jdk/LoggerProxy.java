@@ -42,10 +42,10 @@ public class LoggerProxy implements InvocationHandler {
     }
 
     private void before() {
-        System.out.println("log before" + System.currentTimeMillis());
+        System.out.println("log before " + System.currentTimeMillis());
     }
 
     private void after() {
-        System.out.println("log after" + System.currentTimeMillis());
+        System.out.println("log after " + System.currentTimeMillis());
     }
 }
