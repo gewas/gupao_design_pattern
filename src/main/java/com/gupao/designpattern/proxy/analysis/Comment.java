@@ -10,10 +10,19 @@ import java.sql.Timestamp;
  * @date 2020/3/2 13:32
  */
 public class Comment {
+    private long id;
     private long newsId;
     private long userId;
     private String comment;
     private Timestamp commentTs;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public long getNewsId() {
         return newsId;
@@ -50,6 +59,7 @@ public class Comment {
     @Override
     public String toString() {
         return "Comment{" +
+                "id=" + id +
                 "newsId=" + newsId +
                 ", userId=" + userId +
                 ", comment='" + comment + '\'' +

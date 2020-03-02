@@ -12,6 +12,12 @@ import java.util.List;
  */
 public class CommentService implements ICommentService {
     @Override
+    public Comment updateComment(long id, String comment) {
+        System.out.println("updateComment()");
+        return new Comment();
+    }
+
+    @Override
     public List<Comment> getComments(long newsId) {
         System.out.println("getComments()");
         List<Comment> l = new ArrayList<>(8);

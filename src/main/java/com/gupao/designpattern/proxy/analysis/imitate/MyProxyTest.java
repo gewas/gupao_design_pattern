@@ -14,6 +14,7 @@ import com.gupao.designpattern.proxy.analysis.ICommentService;
 public class MyProxyTest {
     public static void main(String[] args) {
         ICommentService commentService = (ICommentService) MyLoggerProxy.getProxy(new CommentService());
+        commentService.updateComment(3, "asdqwe");
         commentService.getComments(3);
         commentService.createComment(new Comment());
         commentService.clearComments();

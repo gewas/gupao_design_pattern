@@ -11,6 +11,8 @@ import java.util.List;
  */
 public interface ICommentService {
 
+    Comment updateComment(long id, String comment);
+
     List<Comment> getComments(long newsId);
 
     void clearComments();
