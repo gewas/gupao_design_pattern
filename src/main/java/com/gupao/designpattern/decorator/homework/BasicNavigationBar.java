@@ -14,7 +14,7 @@ public class BasicNavigationBar extends NavigationBar {
         addFunction(new Function(0L, "问答", "/index"));
         addFunction(new Function(1L, "文章", "/article"));
         addFunction(new Function(5L, "精品课", "/resources"));
-        addFunction(new Function(6L, "冒泡", "/bubbling"));
+        addFunction(new Function(6L, "冒泡", "/bubblings"));
         addFunction(new Function(7L, "商城", "/shop"));
     }
 

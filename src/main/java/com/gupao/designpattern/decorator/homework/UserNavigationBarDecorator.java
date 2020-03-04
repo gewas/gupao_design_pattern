@@ -20,7 +20,7 @@ public class UserNavigationBarDecorator extends NavigationBar {
         this.navigationBar = navigationBar;
         addFunction(new Function(2L, "作业", "/homework"));
         addFunction(new Function(3L, "题库", "/question-bank"));
-        addFunction(new Function(4L, "成长墙", "/growth--wall"));
+        addFunction(new Function(4L, "成长墙", "/growth-wall"));
     }
 
     @Override
