@@ -25,13 +25,13 @@ public class Test {
         etcNginx.newFile("template");
         etcNginx.newDirectory("module");
 
-        System.out.println("root/dir: " + root.listDir());
+        System.out.println(root.getFilepath() + "#dir: " + root.listDir());
         root.listDir().get(0).delete();
-        System.out.println("root/dir: " + root.listDir());
-        System.out.println("home/dir: " + home.listDir());
-        System.out.println("etc/dir: " + etc.listDir());
-        System.out.println("nginx/dir: " + etcNginx.listDir());
+        System.out.println(root.getFilepath() + "#dir: " + root.listDir());
+        System.out.println(home.getFilepath() + "#dir: " + home.listDir());
+        System.out.println(etc.getFilepath() + "#dir: " + etc.listDir());
+        System.out.println(etcNginx.getFilepath() + "#dir: " + etcNginx.listDir());
         etcNginx.delete();
-        System.out.println("nginx/dir: " + etcNginx.listDir());
+        System.out.println(etcNginx.getFilepath() + "#dir: " + etcNginx.listDir());
     }
 }
