@@ -88,6 +88,11 @@ public class Calculator {
         }
     }
 
+    /**
+     * 计算最终结果
+     *
+     * @return
+     */
     public double calculate() {
         while (!nonTerminalArithmeticInterpreters.empty()) {
             calc();
