@@ -1,5 +1,6 @@
-package com.gupao.designpattern.behavioral.interpreter.nonterminal;
+package com.gupao.designpattern.behavioral.interpreter.nonterminal.operator;
 
+import com.gupao.designpattern.behavioral.interpreter.nonterminal.INonTerminalArithmeticInterpreter;
 import com.gupao.designpattern.behavioral.interpreter.terminal.INumericInterpreter;
 
 /**
@@ -7,7 +8,7 @@ import com.gupao.designpattern.behavioral.interpreter.terminal.INumericInterpret
  * @version 1.0
  * @date 2020/3/22 12:32
  */
-public interface IOperatorInterpreter {
+public interface IOperatorInterpreter extends INonTerminalArithmeticInterpreter {
 
     double interpret(INumericInterpreter left, INumericInterpreter right);
 

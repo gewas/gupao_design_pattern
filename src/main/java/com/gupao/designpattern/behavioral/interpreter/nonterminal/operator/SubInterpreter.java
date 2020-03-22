@@ -1,9 +1,9 @@
-package com.gupao.designpattern.behavioral.interpreter.nonterminal;
+package com.gupao.designpattern.behavioral.interpreter.nonterminal.operator;
 
 import com.gupao.designpattern.behavioral.interpreter.terminal.INumericInterpreter;
 
 /**
- * 乘法
+ * 减法
  * <p>
  * 非终结符表达式
  *
@@ -11,15 +11,15 @@ import com.gupao.designpattern.behavioral.interpreter.terminal.INumericInterpret
  * @version 1.0
  * @date 2020/3/22 12:41
  */
-public class MulInterpreter implements IOperatorInterpreter {
+public class SubInterpreter implements IOperatorInterpreter {
 
     @Override
     public int getPriority() {
-        return 1;
+        return 0;
     }
 
     @Override
     public double interpret(INumericInterpreter left, INumericInterpreter right) {
-        return left.interpret() * right.interpret();
+        return left.interpret() - right.interpret();
     }
 }

@@ -10,6 +10,7 @@ public class Test {
         System.out.println(new Calculator("1 + 2 + 3 + 4").calculate());
         System.out.println(new Calculator("1 + 2 * 3 - 4").calculate());
         System.out.println(new Calculator("1 + 2 * 3 - 4 / 5").calculate());
-        System.out.println(new Calculator("10 + 32 * 93 - 240 / 5").calculate());
+        System.out.println(new Calculator("( 10 + 32 ) * 93 - 240 / 5").calculate());
+        System.out.println(new Calculator("10 + 32 * [ ( 93 - 240 ) / 5 ]").calculate());
     }
 }
