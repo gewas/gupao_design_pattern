@@ -23,8 +23,7 @@ public class Calculator {
 
     private void parse(String expression) {
         String[] symbols = StringUtils.split(expression, " ");
-        for (int i = 0; i < symbols.length; i++) {
-            String symbol = symbols[i];
+        for (String symbol : symbols) {
             if (ArithmeticInterpreterUtils.isOperator(symbol)) {
                 IOperatorInterpreter operator = ArithmeticInterpreterUtils.getOperatorInterpreter(symbol);
                 if (!operatorInterpreters.empty()) {
