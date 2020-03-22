@@ -78,10 +78,6 @@ public class ArithmeticInterpreterUtils {
     }
 
     public static boolean isPrior(IOperatorInterpreter o1, IOperatorInterpreter o2) {
-        return o1.getPriority() - o2.getPriority() > 0;
-    }
-
-    public static boolean isPrior(IBracketInterpreter b1, IBracketInterpreter b2) {
-        return b1.getPriority() - b2.getPriority() > 0;
+        return o1.getPriority() - o2.getPriority() >= 0;
     }
 }
