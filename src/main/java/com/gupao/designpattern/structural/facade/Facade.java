@@ -8,9 +8,9 @@ package com.gupao.designpattern.structural.facade;
  * @date 2020/3/4 20:57
  */
 public class Facade {
-    private SubSystemA subSystemA;
-    private SubSystemB subSystemB;
-    private SubSystemC subSystemC;
+    private SubSystemA subSystemA = new SubSystemA();
+    private SubSystemB subSystemB = new SubSystemB();
+    private SubSystemC subSystemC = new SubSystemC();
 
     public void doWorkA() {
         subSystemA.doWorkA();
